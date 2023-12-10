@@ -98,7 +98,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    “firstname”:{{firstname}},\n    ”lastname”:{{lastname}}\n}",
+					"raw": "{\n  \"firstname\": \"{{firstname}}\",\n  \"lastname\": \"{{lastname}}\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -126,13 +126,7 @@
 							"pm.test(\"Response should indicate valid authentication\", function () {",
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData).to.have.property('authenticated', true);",
-							"});",
-							"",
-							"// Extract the password from the Authorization header ",
-							"let encodedString = \"cG9zdG1hbjpwYXNzd29yZA==\";",
-							"let decodedString = atob(encodedString);",
-							"console.log(\"Decoded String:\", decodedString);",
-							"// result is password"
+							"});"
 						],
 						"type": "text/javascript"
 					}
@@ -144,11 +138,7 @@
 			},
 			"request": {
 				"auth": {
-					"type": "basic",
-					"basic": {
-						"password": "{{password}}",
-						"username": "{{username}}"
-					}
+					"type": "noauth"
 				},
 				"method": "GET",
 				"header": [
