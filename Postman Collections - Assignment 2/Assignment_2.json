@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "f772e9a5-b902-4608-94e3-db1d87d13063",
+		"name": "Final Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test Scenario 1",
+			"id": "394121a8-091d-4c62-be89-a396f26d8ade",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/get?firstname=Kosovare&lastname=Emini",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "firstname",
+							"value": "Kosovare"
+						},
+						{
+							"key": "lastname",
+							"value": "Emini"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Scenario 2",
+			"id": "cdeefdd4-33e0-45b5-9147-7e95c87ddf8a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    “firstname”:”Kosovare”,\n    ”lastname”:”Emini”\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/post"
+			},
+			"response": []
+		},
+		{
+			"name": "Test Scenario 3",
+			"id": "d848a23e-464b-40b2-b995-df997aa702e6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "{{password}}",
+						"username": "{{username}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/basic-auth"
+			},
+			"response": []
+		}
+	]
+}
