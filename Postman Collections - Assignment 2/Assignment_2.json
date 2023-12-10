@@ -7,6 +7,31 @@
 	"item": [
 		{
 			"name": "Test Scenario 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ebe829a3-b521-4e51-877f-04670b3c790f",
+						"exec": [
+							"// Response contains the correct user details based on the entered 'firstname' and 'lastname' and status code is OK.",
+							"",
+							"//Validate the status",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"//Validate if there are correct values",
+							"pm.test(\"Response contains correct first and last name in args\", function () {",
+							"    pm.expect(pm.response.json().args.firstname).to.eql(pm.variables.get(\"firstname\"));",
+							"    pm.expect(pm.response.json().args.lastname).to.eql(pm.variables.get(\"lastname\"));",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "394121a8-091d-4c62-be89-a396f26d8ade",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -38,6 +63,32 @@
 		},
 		{
 			"name": "Test Scenario 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0df0870b-c5b5-4f67-9649-9f7e5514d5a8",
+						"exec": [
+							"// Validate the status 200",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"//Validate if there are correct values",
+							"pm.test(\"Response has the correct user details\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    var firstname = pm.environment.get(\"firstname\");",
+							"    var lastname = pm.environment.get(\"lastname\");",
+							"",
+							"    pm.expect(jsonData.json.firstname).to.eql(firstname);",
+							"    pm.expect(jsonData.json.lastname).to.eql(lastname);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"id": "cdeefdd4-33e0-45b5-9147-7e95c87ddf8a",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
