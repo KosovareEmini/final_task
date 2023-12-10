@@ -15,7 +15,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/get?firstname=Kosovare&lastname=Emini",
+					"raw": "{{baseUrl}}/get?firstname={{firstname}}&lastname={{lastname}}",
 					"host": [
 						"{{baseUrl}}"
 					],
@@ -25,11 +25,11 @@
 					"query": [
 						{
 							"key": "firstname",
-							"value": "Kosovare"
+							"value": "{{firstname}}"
 						},
 						{
 							"key": "lastname",
-							"value": "Emini"
+							"value": "{{lastname}}"
 						}
 					]
 				}
