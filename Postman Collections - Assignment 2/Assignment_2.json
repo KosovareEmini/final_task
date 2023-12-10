@@ -117,12 +117,12 @@
 					"script": {
 						"id": "368a90a3-d6b2-479a-9c84-74841baf1f88",
 						"exec": [
-							"// Validate status 200 ",
+							"// Validate status ",
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
 							"",
-							"// Validate if response contains appropriate messages",
+							"// Validate if response has appropriate messages",
 							"pm.test(\"Response should indicate valid authentication\", function () {",
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData).to.have.property('authenticated', true);",
