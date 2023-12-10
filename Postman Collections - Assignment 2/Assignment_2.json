@@ -98,7 +98,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    “firstname”:”Kosovare”,\n    ”lastname”:”Emini”\n    }",
+					"raw": "{\n    “firstname”:{{firstname}},\n    ”lastname”:{{lastname}}\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
