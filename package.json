@@ -1,0 +1,27 @@
+{
+  "name": "final_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scripts": {
+        "cy:run": "cypress run",
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KosovareEmini/final_task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KosovareEmini/final_task/issues"
+  },
+  "homepage": "https://github.com/KosovareEmini/final_task#readme",
+  "dependencies": {
+    "cypress": "^13.6.1",
+    "fs.promises": "^0.1.2"
+  }
+}
